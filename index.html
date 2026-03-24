@@ -1,10 +1,33 @@
 <!DOCTYPE html>
-<html>
-    <header>
-        <title>Test Backend with Promise</title>
-        <script src = 'back-end-practice.js'></script>
-    </header>
-    <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <p id="error" style="color:red; font-size:12px;"></p>
+        <button onclick="login()">Enter</button>
+    </div>
 
-    </body>
+    <script>
+        function login() {
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+
+            // Simple check: Username must be 'Admin' and pass '123'
+            if (pass === "@345") {
+                localStorage.setItem("username", user); // Save name
+                window.location.href = "store.html";  // Redirect
+            } else {
+                document.getElementById('password').value = "";//clear the password field
+                document.getElementById('error').innerText = "Try Again";
+            }
+        }
+    </script>
+</body>
 </html>
