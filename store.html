@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HACOS Grocery Store</title>
+    <link rel="stylesheet" href="store-style.css">
+</head>
+<body>
+
+    <header>
+        <div id="user-name"></div>
+        <h1>HACOS Grocery Mart</h1>
+        <div id="cart-status">Total: ₦<span id="grand-total">0</span></div>
+    </header>
+
+    <main id="item-grid" class="animate-in">
+        </main>
+
+    <section class="checkout-bar">
+        <button onclick="processOrder()">Proceed to Checkout</button>
+    </section>
+
+    <script src="store-logic.js"></script>
+</body>
+</html>
